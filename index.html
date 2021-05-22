@@ -17,7 +17,7 @@
     <header class="header" id="header">
         <div class="container">
             <img src="./imgs/logo.svg"/>
-            <nav>
+            <nav id="nav">
                 <div class="menu-bar" id="menu-bar">
                     <span></span>
                     <span></span>
@@ -43,21 +43,27 @@
     <script>
         const menuBar = document.getElementById('menu-bar');
         const navList = document.getElementById('nav-list');
-        document.onclick = (e)=>{
-            console.log(e.target.id);
-            if(e.target.id !== 'menu-bar' )
-            {
-                navList.classList.remove('active-menu');
-            menuBar.classList.add('menu-bar');
-            menuBar.classList.remove('close-icon');
-            }
-        }
-        menuBar.onclick = ()=>{
+        const onMenuClick = ()=>{
             navList.classList.toggle('active-menu');
             menuBar.classList.toggle('menu-bar');
             menuBar.classList.toggle('close-icon');
 
         }
+        document.onclick = (e)=>{
+            console.log(e.target.id);
+            if(e.target.id !== 'menu-bar' && e.target.id !== 'nav' && e.target.id !== 'header' )
+            {
+                navList.classList.remove('active-menu');
+            menuBar.classList.add('menu-bar');
+            menuBar.classList.remove('close-icon');
+            }
+            if(e.target.id === 'menu-bar')
+            {
+                onMenuClick();
+            }
+        }
+        menuBar.onclick = onMenuClick();
+       
     </script>
 </body>
 </html>

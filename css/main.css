@@ -226,7 +226,6 @@ a {
     .header .container .close-icon {
         display: block;
         float: right;
-        z-index: 4;
     }
     
     .header .container .active-menu  {
