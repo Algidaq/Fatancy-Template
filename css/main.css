@@ -112,15 +112,47 @@ a {
     width: 24px;
     position: relative;
     display: none;
+    cursor: pointer;
 }
 .header .container .menu-bar span {
     display: block;
     height: 2px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     background-color: var(--main-color);
     width: 100%;
+    cursor: pointer;
 }
 
+.header .container .close-icon {
+    width: 24px;
+    position: relative;
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+}
+.header .container .close-icon span:not(:nth-child(2)) {
+    display: block;
+    height: 2px;
+    margin-bottom: 4px;
+    background-color: white;
+    width: 100%;
+    cursor: pointer;
+}
+.close-icon span:first-child {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.close-icon span:last-child {
+    transform: translateY(-5px) rotate(-45deg);
+    -webkit-transform: translateY(-5px) rotate(-45deg);
+    -moz-transform: translateY(-5px) rotate(-45deg);
+    -ms-transform: translateY(-5px) rotate(-45deg);
+    -o-transform: translateY(-5px) rotate(-45deg);
+}
 
 .header .container nav ul li {
     /* margin: 0 16px; */
@@ -190,11 +222,14 @@ a {
         justify-content: flex-end;
     }
 
-    .header .container  .menu-bar {
+    .header .container  .menu-bar,
+    .header .container .close-icon {
         display: block;
         float: right;
+        z-index: 4;
     }
-    .header .container .menu-bar:hover + ul {
+    
+    .header .container .active-menu  {
         position: fixed;
         display: flex;
         flex-flow: column;
@@ -207,18 +242,19 @@ a {
         background-color: var(--main-color);
     }
 
-    .header .container .menu-bar:hover + ul li {
+    .header .container .active-menu  li {
         padding: 16px 24px;
 }
 
-    .header .container .menu-bar:hover + ul li a {
+    .header .container .active-menu  li a {
         color: white;
       
 }
-.header .container .menu-bar + ul li a::before {
+.header .container .active-menu li a::before {
     display: none;
 }
-    .header .container nav .menu-bar:hover ~ .login {
+    .header .container nav .active-menu ~ .login {
+        width: 100%;
         display: block;
         position: fixed;
         bottom: 0;
@@ -230,9 +266,10 @@ a {
         -ms-transform: translateX(-50%);
         -o-transform: translateX(-50%);
 }
-.header .container nav .menu-bar:hover ~ .login .login-anchor {
+.header .container nav .active-menu ~ .login .login-anchor {
     color: white;
     margin-right: 48px;
+    margin-left: 24px;
 }
 }
 

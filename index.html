@@ -14,17 +14,17 @@
     <title>Fantacy-Template</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <img src="./imgs/logo.svg"/>
             <nav>
-                <div class="menu-bar">
+                <div class="menu-bar" id="menu-bar">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <ul>
-               <li><a href="">Home</a></li>
+                <ul id="nav-list">
+               <li><a href="#home">Home</a></li>
                 <li><a href="">Services</a></li>
                 <li><a href="">Projects</a></li>
                 <li><a href="">Blog</a></li>
@@ -39,5 +39,25 @@
            
         </div>
     </header>
+    <section id="home"></section>
+    <script>
+        const menuBar = document.getElementById('menu-bar');
+        const navList = document.getElementById('nav-list');
+        document.onclick = (e)=>{
+            console.log(e.target.id);
+            if(e.target.id !== 'menu-bar' )
+            {
+                navList.classList.remove('active-menu');
+            menuBar.classList.add('menu-bar');
+            menuBar.classList.remove('close-icon');
+            }
+        }
+        menuBar.onclick = ()=>{
+            navList.classList.toggle('active-menu');
+            menuBar.classList.toggle('menu-bar');
+            menuBar.classList.toggle('close-icon');
+
+        }
+    </script>
 </body>
 </html>
