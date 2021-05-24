@@ -902,7 +902,7 @@ a {
 
 @media (max-width: 767px) {
   .pricing {
-    padding: var(--section-padding-sm);
+    padding: var(--section-padding-sm) 0;
   }
 }
 
@@ -1137,6 +1137,13 @@ footer .content p span {
 }
 
 footer .content a {
+  font-size: 15px;
+  font-weight: 500;
   color: white;
   cursor: pointer;
+}
+@media (max-width: 519px) {
+  footer .content svg {
+    display: none;
+  }
 }
