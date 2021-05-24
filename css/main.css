@@ -37,7 +37,7 @@ h6 {
   margin: 0;
 }
 p {
-  font-family: "Poppins";
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   color: var(--main-color);
 }
 h1 {
@@ -891,4 +891,103 @@ a {
   .qoute-section .qoute-grid .qoute-card {
     flex-basis: calc(90% / 3);
   }
+}
+
+/** End of Qoute Section */
+
+/**Start of Pricing Section */
+.pricing {
+  padding: var(--section-padding-lg) 0;
+}
+
+@media (max-width: 767px) {
+  .pricing {
+    padding: var(--section-padding-sm);
+  }
+}
+
+.pricing .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.pricing-grid .pricing-card {
+  padding: 32px 24px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+  border-radius: var(--image-card-radius);
+  -webkit-border-radius: var(--image-card-radius);
+  -moz-border-radius: var(--image-card-radius);
+  -ms-border-radius: var(--image-card-radius);
+  -o-border-radius: var(--image-card-radius);
+}
+
+.pricing-grid .pricing-card .row-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.pricing-grid .pricing-card .row-1 img {
+  width: 40px;
+  height: 40px;
+  max-width: 100%;
+}
+.pricing-grid .pricing-card .row-1 h3 {
+  align-self: flex-end;
+}
+
+.pricing-grid .pricing-card .row-2 {
+  margin-bottom: 48px;
+}
+.pricing-grid .pricing-card .row-2 h3 {
+  line-height: 2.5;
+}
+
+.pricing-grid .pricing-card .row-2 p {
+  line-height: 2.1;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.pricing-grid .pricing-card .row-3 ul li {
+  padding: 16px 0 16px 32px;
+  position: relative;
+}
+.pricing-grid .pricing-card .row-3 ul li h4::before {
+  content: url(../imgs/check.svg);
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-60%);
+  -webkit-transform: translateY(-60%);
+  -moz-transform: translateY(-60%);
+  -ms-transform: translateY(-60%);
+  -o-transform: translateY(-60%);
+}
+
+.pricing-grid
+  .pricing-card:first-child
+  .row-3
+  ul
+  li:nth-child(n + 3)
+  h4::before {
+  display: none;
+}
+
+.pricing-grid .pricing-card:nth-child(2) .row-3 ul li:nth-child(5) h4::before {
+  display: none;
+}
+
+.pricing-grid .pricing-card .row-3 .btn.buy {
+  display: block;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  background-color: var(--button-color);
+  margin: 32px auto 0 auto;
 }
