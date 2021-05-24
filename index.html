@@ -26,12 +26,12 @@
                     <span></span>
                 </div>
                 <ul id="nav-list">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Pricing</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="login">
                     <a href="" class="login-anchor">Log in</a>
@@ -81,7 +81,7 @@
     </section>
     <!--* End of Client section -->
     <!--*Start of services section -->
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <div class="section-heading-1">
                 <h2>Our awesome services</h2>
@@ -144,7 +144,7 @@
         </div>
     </section>
     <!--* End of creativity section -->
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="container">
             <div class="section-heading-1">
                 <h2>Our awesome Projects</h2>
@@ -210,7 +210,7 @@
         </div>
     </section>
     <!--* End of project section -->
-    <section class="blog">
+    <section class="blog" id="blog">
         <div class="container">
             <div class="section-heading-1">
                 <h2>Our Awesome Stories</h2>
@@ -259,7 +259,7 @@
     </section>
     <!--* End of Project Section -->
     <!-- * Start of qoute section -->
-    <section class="qoute-section">
+    <section class="qoute-section" >
         <div class="container">
             <div class="section-heading-1">
                 <h2>What They Say?</h2>
@@ -289,7 +289,8 @@
         </div>
     </section>
     <!-- * End of qoute section -->
-    <section class="pricing">
+    <!--*Start of Pricing section -->
+    <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-heading-1">
                 <h2>Check Our Pricing</h2>
@@ -389,6 +390,59 @@
             </div>
         </div>
     </section>
+    <!-- * End of Pricing section -->
+    <!--*Start of contact section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-heading-1">
+                <h2>Let's get in touch</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
+            </div>
+            <div class="contact-content">
+                <form action="">
+                    <div class="input-container">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" name="" id="full-name" placeholder="Your Name Here">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="email">Email</label>
+                        <input type="text" name="" id="email" placeholder="example123@mail.com">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="" id="subject" placeholder="Subject">
+                    </div>
+                    <textarea name="" id="" cols="30" rows="8" class="message" placeholder="Your Message here" ></textarea>
+                    <input class="btn" type="submit" value="Send Message">
+                </form>
+                <div class="images">
+                    <img src="./imgs/contact-0.webp" alt="">
+                    <img src="./imgs/contact-1.jpg" alt="">
+                    <img src="./imgs/contact-2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--* end of contact section -->
+    <footer>
+        <div class="container">
+            <div class="content">
+                <svg xmlns="http://www.w3.org/2000/svg" width="96" height="40" viewBox="0 0 96 40">
+                    <g id="Group_101" data-name="Group 101" transform="translate(-375 -21)">
+                      <rect id="Rectangle_16" data-name="Rectangle 16" width="13" height="8" rx="4" transform="translate(375 53)" fill="#f40051"/>
+                      <text id="fanatic" transform="translate(412 48)" fill="#fff" font-size="20" font-family="Helvetica"><tspan x="0" y="0">fanatic</tspan></text>
+                      <rect id="Rectangle_11" data-name="Rectangle 11" width="20" height="8" rx="4" transform="translate(382 21)" fill="#f2b300"/>
+                      <rect id="Rectangle_15" data-name="Rectangle 15" width="20" height="8" rx="4" transform="translate(382 37)" fill="#7620ff"/>
+                      <rect id="Rectangle_12" data-name="Rectangle 12" width="8" height="8" rx="4" transform="translate(375 29)" fill="#4cd5c5"/>
+                    </g>
+                  </svg>
+                  <p>&copy; 2020 - <span>fanatic</span> All Right Reserved</p>
+                  <a href="#">Back to top</a>
+            </div>
+        </div>
+    </footer>
     <script>
         const menuBar = document.getElementById('menu-bar');
         const navList = document.getElementById('nav-list');
